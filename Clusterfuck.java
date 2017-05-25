@@ -14,7 +14,7 @@ public class TestBot1 extends DefaultBWListener {
     private int GPS = 0;
     private int income = 0;
     private int MaxWorkers = 19;
-    private int MaxRacks = 2;
+    private int MaxRacks = 3;
     private int Bases = 0;
     private int Racks = 0;
     private int Academy = 0;
@@ -59,13 +59,13 @@ public class TestBot1 extends DefaultBWListener {
     private int forceSupply = 0;
     private int supplyBuilding = 0;
     private boolean attacking = false;
-    private boolean expanding = false;
+    private boolean expanding = true;
     private boolean hasAttackpos;
     private Position enemyBasePos;
     private Unit Commander;
     private int CommanderID;
     private boolean HasCommander = false;
-    private boolean ExpandEnabled = false;
+    private boolean ExpandEnabled = true;
     private Color EColor;
     private TilePosition ExpandPos;
     private TilePosition lastExpandPos;
@@ -106,7 +106,7 @@ public class TestBot1 extends DefaultBWListener {
         
         if(unit.getType() == UnitType.Terran_Command_Center && unit.getPlayer() == self){
         	lastExpandPos = unit.getTilePosition();
-        	expanding = false;
+        	expanding = true;
         	Bases = Bases + 1;
         }
         
@@ -766,9 +766,9 @@ public class TestBot1 extends DefaultBWListener {
                 }
             }     
            
-            if(myUnit.isUnderAttack() == true && myUnit.getType().isWorker() == false){
-            	for(Unit targets : myUnit.getUnitsInRadius(400)){
-            		if(targets.isIdle() == true){
+            if(myUnit.isUnderAttack() == true && myUnit.getType().isWorker() == false && myUnit.getType().isBuilding() == false){
+            	for(Unit targets : myUnit.getUnitsInRadius(600)){
+            		if(targets.isIdle() == true && targets.getType().isWorker() == false){
             			targets.attack(myUnit.getPosition());
             		}
             	}
@@ -1005,7 +1005,6 @@ public class TestBot1 extends DefaultBWListener {
         
         
         if (Racks < MaxRacks && self.minerals() >= 150){
-	//iterate over units to find a worker
 	for (Unit myUnit : self.getUnits()) {
 		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isGatheringGas() == false && myUnit.isCarryingGas() == false && myUnit.getID() != scoutID){
 			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Barracks, self.getStartLocation());
@@ -1016,33 +1015,45 @@ public class TestBot1 extends DefaultBWListener {
 		}
 	}
 }
+             
+        if (Factories < MaxFactories && self.minerals() >= 200 && self.gas() >= 150){
+	for (Unit myUnit : self.getUnits()) {
+		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isCarryingMinerals() == true && myUnit.isGatheringGas() == false && myUnit.isCarryingGas() == false && myUnit.getID() != scoutID){
+			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Factory, self.getStartLocation());
+			if (buildTile != null) {
+				myUnit.build(UnitType.Terran_Factory, buildTile);
+				break;
+			}
+		}
+	}
+} 
         	
+         
+        if (self.minerals() >= 100 && Bunks != 2){
+	for (Unit myUnit : self.getUnits()) {
+		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isCarryingMinerals() == true && myUnit.isGatheringGas() == false && myUnit.isCarryingGas() == false && myUnit.getID() != scoutID){
+			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Bunker, self.getStartLocation());
+			if (buildTile != null) {
+				myUnit.build(UnitType.Terran_Bunker, buildTile);
+				break;
+			}
+		}
+	}
+}
+    
         
-          
-        if (self.minerals() >= 100 && Bunks < 2){
-        	for (Unit myUnit : self.getUnits()) {
-        		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isCarryingMinerals() == true && myUnit.getID() != scoutID){
-        			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Bunker, Choke.toTilePosition());
-        			if (buildTile != null) {
-        				myUnit.build(UnitType.Terran_Bunker, buildTile);
-        				myUnit.move(BasePos.toPosition(), true);
-        				break;
-        			}
-        		}
-        	}
-        }
         
-        if (self.minerals() >= 150 && Academy != 1) {     
-        	for (Unit myUnit : self.getUnits()) {
-        		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isCarryingMinerals() == false && myUnit.isGatheringGas() == false && myUnit.getID() != scoutID){
-        			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Academy, self.getStartLocation());
-        			if (buildTile != null) {
-            				myUnit.build(UnitType.Terran_Academy, buildTile);
-            				break;
-        			}
-        		}
-        	}
-        }
+        if (self.minerals() >= 150){
+	for (Unit myUnit : self.getUnits()) {
+		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isCarryingMinerals() == true && myUnit.isGatheringGas() == false && myUnit.isCarryingGas() == false && myUnit.getID() != scoutID){
+			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Academy, self.getStartLocation());
+			if (buildTile != null) {
+				myUnit.build(UnitType.Terran_Academy, buildTile);
+				break;
+			}
+		}
+	}
+}
         
         if (self.minerals() >= 150 && Factories > 1 && Bays == 0) {     
        	for (Unit myUnit : self.getUnits()) {
@@ -1068,20 +1079,7 @@ public class TestBot1 extends DefaultBWListener {
        	}
        }
        
-        
 
-        
-        if (Factories < MaxFactories && self.minerals() >= 200 && self.gas() >= 100){
-        	for (Unit myUnit : self.getUnits()) {
-        		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isCarryingMinerals() == false && myUnit.isGatheringGas() == false && myUnit.getID() != scoutID){
-        			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Factory, self.getStartLocation());
-        			if (buildTile != null) {
-        				myUnit.build(UnitType.Terran_Factory, buildTile);
-        				break;
-        			}
-        		}
-        	}
-        }
         
         if (self.minerals() >= 400 && ExpandEnabled == true){
         	System.out.println("Expanding");
@@ -1149,14 +1147,6 @@ public class TestBot1 extends DefaultBWListener {
 						) return n.getTilePosition();
 			}
 		}
-		
-		if(buildingType.isResourceDepot() == true){
-		 maxDist = 1;
-		}
-		
-		if(buildingType.canAttack() == true){
-           maxDist = 2;
-		}
 			
 		while ((maxDist < stopDist) && (ret == null)) {
 			for (LastX=aroundTile.getX()-maxDist; LastX<=aroundTile.getX()+maxDist; LastX++) {
@@ -1183,10 +1173,11 @@ public class TestBot1 extends DefaultBWListener {
 	
 	public TilePosition NextExpand() {
         for(BaseLocation Expand : BWTA.getBaseLocations()){
+        	BaseLocation Expand1 = BWTA.getNearestBaseLocation(Expand.getPosition());
         	System.out.println(Expand.getTilePosition());
-        	if(BWTA.getGroundDistance(lastExpandPos, Expand.getTilePosition()) < 1500 && game.canBuildHere(Expand.getTilePosition(), UnitType.Terran_Command_Center) == true){
-    			System.out.println(BWTA.getGroundDistance(lastExpandPos, Expand.getTilePosition()));
-        			System.out.println("ExpandPos " + Expand.getTilePosition());
+        	if(BWTA.getGroundDistance(lastExpandPos, Expand1.getTilePosition()) < 1500 && game.canBuildHere(Expand1.getTilePosition(), UnitType.Terran_Command_Center) == true){
+    			System.out.println(BWTA.getGroundDistance(lastExpandPos, Expand1.getTilePosition()));
+        			System.out.println("ExpandPos " + Expand1.getTilePosition());
         			ExpandPos = Expand.getTilePosition();
             		return Expand.getTilePosition();
             		
