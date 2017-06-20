@@ -21,3 +21,24 @@ if(myUnit.getType() == UnitType.Terran_Command_Center){
    }
   }
 }
+
+
+        if ((self.supplyTotal() - self.supplyUsed()) < 5 && self.minerals() >= 100 && supplyBuilding != 4 && game.getFPS() > 20) { 
+        	for (Unit myUnit : self.getUnits()) {
+        		if (myUnit.getType() == UnitType.Terran_SCV && myUnit.isGatheringGas() == false && myUnit.isCarryingGas() == false && myUnit.getID() != scoutID){
+        			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Supply_Depot, self.getStartLocation());
+        			if (buildTile != null) {
+        				myUnit.build(UnitType.Terran_Supply_Depot, buildTile);
+        				break;
+        			}
+        		}
+        	}	
+        }
+                if ((self.supplyTotal() - self.supplyUsed()) < 5 && self.minerals() >= 100 && supplyBuilding != 4 && game.getFPS() > 20) {  
+        	       Unit myUnit = GetWorker();
+        			TilePosition buildTile = getBuildTile(myUnit, UnitType.Terran_Supply_Depot, self.getStartLocation());
+        			if (buildTile != null) {
+        				myUnit.build(UnitType.Terran_Supply_Depot, buildTile);
+        			}
+        		}
+          
