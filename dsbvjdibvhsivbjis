@@ -1,0 +1,9 @@
+if(myUnit.isIdle() == true){
+  for(Unit units : myUnit.getUnitsInRadius(400)){
+  if(units.atttacking() == true){
+  Position pos = units.target().getPosition();
+  myUnit.attack(pos);
+  
+  }
+}
+
