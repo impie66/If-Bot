@@ -28,3 +28,25 @@
             
             
             old CBP code
+
+
+	public TilePosition getExpands() {
+	        for(BaseLocation Expand : BWTA.getBaseLocations()){
+	        	System.out.println(Expand.getTilePosition());
+                if(game.canBuildHere(Expand.getTilePosition(), UnitType.Terran_Command_Center) == true){
+                	Iterator it=baseLocations.iterator();
+                	while(it.hasNext()){
+                		if(it.equals(Expand.getTilePosition())){
+                			System.out.println("Oh that baselocation has already been claimed for myself?????");
+                		}
+                		else {
+                			baseLocations.add(Expand.getTilePosition());
+                			System.out.println("Added " + Expand.getTilePosition() + " To an claimable baselocation.");
+                			return Expand.getTilePosition();
+                		}
+                		
+                	 }
+                  }
+               }
+	        return null;
+	 }
