@@ -1,0 +1,30 @@
+  /// CBP          
+            if(myUnit.isConstructing() == true && myUnit.getType() == UnitType.Terran_SCV){
+            	TilePosition e = myUnit.getOrderTargetPosition().toTilePosition();
+            	currentBuildPlacements.add(e);
+            }
+            
+            if(myUnit.isConstructing() == true && myUnit.getType() == UnitType.Terran_SCV){
+            	int count = 0;
+            	 TilePosition order = myUnit.getOrderTargetPosition().toTilePosition();
+            	 Iterator it=currentBuildPlacements.iterator();
+            	TilePosition m = myUnit.getOrderTargetPosition().toTilePosition();
+            	while(it.hasNext()){
+            		count = count + 1;
+            		if(it.equals(order)){
+            			System.out.println("CBP: Has Found " + it.toString() + " Equal to " + order);
+            			myUnit.stop();
+            			buildwait = false;
+            			saving = false;
+            		}
+            		
+            		if(count >= currentBuildPlacements.size()){
+            			break;
+            		}
+            		
+            	}
+            	
+            }
+            
+            
+            old CBP code
