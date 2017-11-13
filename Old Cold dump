@@ -50,3 +50,12 @@
                }
 	        return null;
 	 }
+
+
+
+
+
+            if(NewBuild != null && game.canBuildHere(NewBuild, buildingName) == false){
+            	buildwait = false;
+            	System.out.println("Building can't fit canceling it");
+            }
