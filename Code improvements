@@ -63,4 +63,20 @@ return null;
 
 
 
+public Position getJukePos(Unit unitt, Unit targett){
+//Thanks to Ravaelle's bot https://github.com/Ravaelles/Atlantis
+Position fp1 =  new Position(unitt.getX() - targett.getX(), unitt.getY() - targett.getY());
+Position fp2 =  new Position(unitt.getX(), unitt.getY());
+Position fp3 = new Position(fp1.getX() + fp2.getX(), fp1.getY() + fp2.getY());
+Position Move = fp3;
+if(move.isValid() == true && move != null){
+return move;
+}
+else
+{
+return null;
+}
+return null;
+}
+
 
