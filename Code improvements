@@ -10,6 +10,7 @@ runTo = new Position((int) (unit.getX() - ratio * vectorX), (int) (unit.getY() -
               Unit targett = myUnit.getTarget();
               int distance = 0.2;
               int TargetDistance = unit.getDistance(targett);
+              double ratio = 1.2 / TargetDistance;
               int finalvalue = TargetDistance + distance;
             	System.out.println("Vulture");
             	System.out.println("Target");
@@ -43,3 +44,26 @@ return null;
 }
 return null;
 }
+
+           if(myUnit.getType() == UnitType.Terran_Vulture && myUnit.isAttacking() == true){
+            	System.out.println("Launch");
+            	Unit unitt = myUnit;
+            	System.out.println("Vulture");
+            	Unit targett = myUnit.getTarget();
+            	System.out.println("Target");
+           	    Position fp1 =  new Position(unitt.getX() - targett.getX(), unitt.getY() - targett.getY());
+        	    Position fp2 =  new Position(unitt.getX(), unitt.getY());
+        	    Position fp3 = new Position(fp1.getX() + fp2.getX(), fp1.getY() + fp2.getY());
+        	    Position Move = fp3;
+            	System.out.println("Call");
+            	if(Move.isValid() == true) {
+            		System.out.println("Valid");
+            		unitt.move(Move);
+            		System.out.println("move");
+            	}
+            	System.out.println("Not valid");
+}
+
+
+
+
