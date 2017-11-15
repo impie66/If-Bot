@@ -1,8 +1,5 @@
 // code improvement(working away from home)
 
-runTo = new Position((int) (unit.getX() - ratio * vectorX), (int) (unit.getY() - ratio * vectorY));
-
-
             if(myUnit.getType() == UnitType.Terran_Vulture && myUnit.isAttacking() == true){
             //Thanks to Ravaelle's bot https://github.com/Ravaelles/Atlantis
             	System.out.println("Launch");
