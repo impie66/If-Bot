@@ -1,3 +1,26 @@
 // code improvement(working away from home)
 
+runTo = new Position((int) (unit.getX() - ratio * vectorX), (int) (unit.getY() - ratio * vectorY));
 
+
+            if(myUnit.getType() == UnitType.Terran_Vulture && myUnit.isAttacking() == true){
+            //Thanks to Ravaelle's bot https://github.com/Ravaelles/Atlantis
+            	System.out.println("Launch");
+            	Unit unitt = myUnit;
+              Unit targett = myUnit.getTarget();
+              int distance = 0.2;
+              int TargetDistance = unit.getDistance(targett);
+              int finalvalue = TargetDistance + distance;
+            	System.out.println("Vulture");
+            	System.out.println("Target");
+               double valueX = targett.getX() - unitt.getX();
+               double valueY = targett.getY() - unitt.getY();
+              Position move = new Position((int) (unitt.getX() - finalvalue * valueX), (int) (unitt.getY() - ratio * valueY));
+            	System.out.println("Call");
+            	if(Move.isValid() == true) {
+            		System.out.println("Valid");
+            		unitt.move(Move);
+            		System.out.println("move");
+            	}
+            	System.out.println("Not valid");
+}
