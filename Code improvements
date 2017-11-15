@@ -24,3 +24,22 @@ runTo = new Position((int) (unit.getX() - ratio * vectorX), (int) (unit.getY() -
             	}
             	System.out.println("Not valid");
 }
+
+
+public Position getRetreatPos(Unit unitt, Unit targett){
+//Thanks to Ravaelle's bot https://github.com/Ravaelles/Atlantis
+int distance = 0.2;
+int TargetDistance = unit.getDistance(targett);
+int finalvalue = TargetDistance + distance;
+double valueX = targett.getX() - unitt.getX();
+double valueY = targett.getY() - unitt.getY();
+Position move = new Position((int) (unitt.getX() - finalvalue * valueX), (int) (unitt.getY() - ratio * valueY));
+if(move.isValid() == true && move != null){
+return move;
+}
+else
+{
+return null;
+}
+return null;
+}
