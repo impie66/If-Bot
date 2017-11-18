@@ -3,3 +3,5 @@ siege tanks not siegeing
 bot crash when attacking if enemy base location is not scouted
 bot decided to stop building when buildwait and saving is false (this fixes when it attacks?)
 SCV's overthrow communists and stop working in the factories and help siege tanks when they are attacked. (both mineral and gas workers)
+Gas dont build early and bricks bot
+
