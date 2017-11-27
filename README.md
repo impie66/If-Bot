@@ -5,3 +5,4 @@ Just uploading to compare dick sizes to other bots.
 
 Gonna be uploading soon. Feel free to post code improvements. 
 
+https://www.youtube.com/watch?v=gfWAzIsyiXg
