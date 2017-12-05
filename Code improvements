@@ -79,6 +79,36 @@ return null;
 return null;
 }
 
+ArrayList<Unit> myMinerals = new ArrayList<Unit>();
+
+// When CC is complete
+
+for(Unit minerals : BWTA.getNearestBaseLocation(pos).getMinerals()){
+   if(myMinerals.contains(minerals) == false){
+      myMinerals.add(minerals);
+   }
+   
+
+}
+
+// New gathering script
+
+if (myUnit.getType().isWorker() && myUnit.isIdle() && myUnit.isGatheringGas() == false && myUnit.getID() != scoutID) {
+		Unit closestMineral = null;
+			for (Unit neutralUnit : myMinerals) {
+              if (closestMineral == null || myUnit.getDistance(neutralUnit) < myUnit.getDistance(closestMineral)) {
+					closestMineral = neutralUnit;
+                if (closestMineral != null) {
+					myUnit.gather(closestMineral, false);
+				                    }
+                   }
+			}
+}
+
+
+
+
+
 
 
 
