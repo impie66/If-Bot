@@ -107,7 +107,37 @@ if (myUnit.getType().isWorker() && myUnit.isIdle() && myUnit.isGatheringGas() ==
 
 
 
-
+public Position Regroup(){
+   int X;
+   int Y;
+   int index = 0;
+   int max = myUnits.size();
+  for(Unit unit : myUnits){
+    index = index + 1;
+    int unitX = unit.getX();
+    int unitY = unit.getY();  
+    X = X - unitX / myUnits.size();
+    Y = Y - unitY / myUnits.size();
+    
+    if(index >= max){
+      Position pos = new Position(X, Y)
+        if(pos.isValid() == false){
+        pos.makeValid();
+        return pos;
+        }
+      return pos;
+      
+      
+    }
+    
+    
+  }
+  
+  
+  return null;
+  
+  
+}
 
 
 
