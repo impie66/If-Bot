@@ -140,5 +140,45 @@ public Position Regroup(){
 }
 
 
+			if (myUnit.isUnderAttack() == true) {
+				Position lastorder = myUnit.getTargetPosition();
+				int hostiles = 0;
+				int allies = 0;
+				for (Unit targets : myUnit.getUnitsInRadius(300)) {
+					if (targets.getPlayer().isEnemy(self)) {
+						hostiles = hostiles + targets.getType().mineralPrice() + targets.getType().gasPrice();
+						if (targets.getType() == UnitType.Protoss_Photon_Cannon) {
+							hostiles = hostiles + 700;
+						}
+						if (targets.getType() == UnitType.Zerg_Sunken_Colony) {
+							hostiles = hostiles + 700;
+						}
+						if (targets.getType() == UnitType.Protoss_Zealot) {
+							hostiles = hostiles + 400;
+						}
+
+					}
+					if (targets.getPlayer().isAlly(self) && targets.getType().isBuilding() == false) {
+						allies = allies + targets.getType().mineralPrice() + targets.getType().gasPrice();
+					}
+				}
+				if (allies > hostiles) {
+					if(myUnit.getType().isWorker() == false && myUnit.isAttacking() == false){
+					}
+				} else {
+					game.printf(" " + BWTA.getGroundDistance(myUnit.getTilePosition(), Commander.getTilePosition()));
+					if (Commander.exists() == true && myUnit.isMoving() == false && BWTA.getGroundDistance(myUnit.getTilePosition(), Commander.getTilePosition()) > 50) {
+						myUnit.move(Commander.getPosition());
+					} else {
+						if(myUnit.isMoving() == false){
+                        Position regroup = Regroup();
+                          if(regroup != null && myUnit.canPath(regroup) == true){
+                            myUnit.move(regroup);
+                          }
+						}
+				}
+			 }
+}
+
 
 
