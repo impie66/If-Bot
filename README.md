@@ -1,5 +1,5 @@
 
-<h1>If bot</h1>
+<h1>If Bot</h1>
 
 
 Really bad Brood war AI Designed by me.
