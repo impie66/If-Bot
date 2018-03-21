@@ -1,5 +1,11 @@
-# If-Bot
 
-<h1>What is If Bot?</h1>
+<h1>If bot</h1>
 
-<p style="fontfamily: Comic Sans MS">If Bot is my first ever bot made using the Example bot's framework and java</p>
+
+Really bad Brood war AI Designed by me.
+
+Just uploading to compare dick sizes to other bots.
+
+Gonna be uploading soon. Feel free to post code improvements.
+
+Beware all those who look at my source code. It's gonna be messy
