@@ -5,7 +5,7 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 
 <h2><b>Features</b></h2>
 
-<ol>
+
 Throwing Marines one at the enemy one at a time
 Siege Tanks that unsiege instantly after shooting
 2000 APM for one marine to stim
@@ -16,11 +16,6 @@ Expanding and repairing
 Alot of global values
 Alot of useless values
 
-  
- 
-  
-  
-  
-</ol>
+
 
 
