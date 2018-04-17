@@ -6,7 +6,7 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 <h2><b>Features</b></h2>
 
 
-* Throwing Marines one at the enemy one at a time
+* Giant lines of marines a moving
 * Siege Tanks that unsiege instantly after shooting
 * 2000 APM for one marine to stim
 * A free for all building system
@@ -15,6 +15,15 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 * Expanding and repairing
 * Alot of global values
 * Alot of useless values
+* Science Vessels, Battlecruisers, Vultures, Golaiths
+* Infantry && Armor Upgrades
+
+
+<h2>How can i help?</h2>
+It's my suffering and mine alone
+
+
+
 
 
 
