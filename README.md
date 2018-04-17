@@ -24,6 +24,13 @@ It's my suffering and mine alone
 
 
 
+![suffering,txt](https://i.imgur.com/Xo422hY.gif)
+BCs?
+![suffering,txt](https://i.imgur.com/KkulnQg.gif)
+Colonizing the enemy
+![suffering,txt](https://i.imgur.com/LahNhaL.gif)
+STRATEGIC BASE DESIGN
+
 
 
 
