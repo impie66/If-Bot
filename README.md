@@ -18,9 +18,18 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 * Science Vessels, Battlecruisers, Vultures, Golaiths
 * Infantry && Armor Upgrades
 
+<hr />
 
-<h2>How can i help?</h2>
-It's my suffering and mine alone
+Running If Bot Locally
+
+32 bit JRE is required to run If Bot.
+
+1. Download the Jar file from the SSCAIT website or directly [Here](https://sscaitournament.com/bot_binary.php?bot=If+Bot)
+2. Run jar file or run with CMD command java -jar ifBot.JAR
+3. Launch Chaos launcher with BWAPI injected
+4. Sit back and relax
+
+<hr />
 
 
 
