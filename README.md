@@ -20,12 +20,12 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 
 <hr />
 
-Running If Bot Locally
+<h2>Running If Bot Locally</h2>
 
 32 bit JRE is required to run If Bot.
 
 1. Download the Jar file from the SSCAIT website or directly [Here](https://sscaitournament.com/bot_binary.php?bot=If+Bot)
-2. Run jar file or run with CMD command java -jar ifBot.JAR
+2. Run either manually or with CMD command java -jar ifBot.JAR
 3. Launch Chaos launcher with BWAPI injected
 4. Sit back and relax
 
