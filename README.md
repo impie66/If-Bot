@@ -34,6 +34,8 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 <h2>What Issues did i face when developing the bot?</h2>
 <strong>Having the actually use my brain for once.</strong>
 
+<hr />
+
 
 ![suffering,txt](https://i.imgur.com/Xo422hY.gif)
 BCs?
