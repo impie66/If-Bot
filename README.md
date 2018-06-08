@@ -44,7 +44,13 @@ Colonizing the enemy
 ![suffering,txt](https://i.imgur.com/LahNhaL.gif)
 STRATEGIC BASE DESIGN
 
+![soup](https://i.imgur.com/bCd8VUn.gif)
+Introducing BWEB1 -- If Bot's Zergling tight wall system.
 
+![pineapples](https://i.imgur.com/vtKL4SK.gif)
+Jaedong's imba bbs tank medic build
 
+![carrots](https://i.imgur.com/VKQCH4R.gif)
+Appriopate decision making 
 
 
