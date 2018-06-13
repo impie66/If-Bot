@@ -12,9 +12,9 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 * A free for all building system 
 * A fuckload of bunkers
 * jFap Combat Sim
-* Expanding and repairing
-* Alot of global values
-* Alot of useless values
+* Expanding repairing, And unit abilities
+* Alot of global variables
+* Alot of useless variables
 * Science Vessels, Battlecruisers, Vultures, Golaiths
 * Infantry && Armor Upgrades
 
@@ -25,8 +25,8 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 32 bit JRE is required to run If Bot.
 
 1. Download the Jar file from the SSCAIT website or directly [Here](https://sscaitournament.com/bot_binary.php?bot=If+Bot)
-2. Run either manually or with CMD command java -jar ifBot.JAR
-3. Launch Chaos launcher with BWAPI injected
+2. Run either with ai = IfBot.jar in the BWAPI.ini file or with CMD command java -jar ifBot.JAR and twith no ai = field in the BWAPi.ini file.
+3. Launch Chaos launcher with BWAPI injected, nake sure the BWAPi.ini file is set up correctly
 4. Sit back and relax
 
 <hr />
@@ -37,6 +37,7 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 <hr />
 
 <h2>Updates</h2>
+
 <b>Build 14th June:</b>
 
 * Bot now attacks based on enemy Defences(Globally) and enemy unit scores
