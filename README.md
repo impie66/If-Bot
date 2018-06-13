@@ -36,6 +36,18 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 
 <hr />
 
+<h2>Updates</h2>
+<b>Build 14th June:</b>
+
+* Bot now attacks based on enemy Defences(Globally) and enemy unit scores
+* Bot is less likely to attack near a chokepoint
+* Bot now builds more marines based difference between the enemy's and i's fap scores.
+* Bot now builds more bunkers to defend against rush attacks
+Unfortunally it counts globally, it will build bunkers even when the units arent attacking me
+
+<hr />
+
+
 
 ![suffering,txt](https://i.imgur.com/Xo422hY.gif)
 BCs?
