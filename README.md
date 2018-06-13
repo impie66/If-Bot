@@ -40,10 +40,11 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 <b>Build 14th June:</b>
 
 * Bot now attacks based on enemy Defences(Globally) and enemy unit scores
-* Bot is less likely to attack near a chokepoint
+* Bot is less likely to attack near an enemy chokepoint within 2000 distance of the enemy base(To reduce mass suicide at chokepoints)
 * Bot now builds more marines based difference between the enemy's and i's fap scores.
 * Bot now builds more bunkers to defend against rush attacks
 Unfortunally it counts globally, it will build bunkers even when the units arent attacking me
+* Added a basic and untested anti lure script to stop units from being lured from bunkers when i'm the bot is defending
 
 <hr />
 
