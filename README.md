@@ -32,7 +32,7 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 <hr />
 
 <h2>What Issues did i face when developing the bot?</h2>
-<strong>Having the actually use my brain for once.</strong>
+<strong>Having to actually use my brain for once.</strong>
 
 <hr />
 
