@@ -55,7 +55,7 @@ Unfortunally it counts globally, it will build bunkers even when the units arent
 * Bot now expands rapidly if conditions are right
 * Siege tanks now longer take a paid vacation when unsiegeing
 * Bot now builds reactionary Golaiths in responce to enemy Air
-* Basic nuke avoidiance script (Fuck you Stock Terran AI stop fucking nuking my shit)
+* Basic nuke avoidiance script (Fuck you Stock Terran AI and Hannes)
 * Now builds Bunkers and Missile Turrets to defend 2nd base
 * Gave enemy units "special" names
 * After a harsh whipping, the bot no longer upgrades spider mines when no vultures are on the field
