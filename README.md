@@ -38,7 +38,7 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 
 <h2>Updates</h2>
 
-<b>Build 14th June:</b>
+<b>Build 14th June 2018:</b>
 
 * Bot now attacks based on enemy Defences(Globally) and enemy unit scores
 * Bot is less likely to attack near an enemy chokepoint within 2000 distance of the enemy base(To reduce mass suicide at chokepoints)
@@ -46,6 +46,24 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 * Bot now builds more bunkers to defend against rush attacks
 Unfortunally it counts globally, it will build bunkers even when the units arent attacking me
 * Added a basic and untested anti lure script to stop units from being lured from bunkers when i'm the bot is defending
+
+<hr />
+
+<b>Build 29th June 2018:</b>
+
+* UH UH UH UH STAYING ALIVE, STAYING ALIVE!!
+* Bot now expands rapidly if conditions are right
+* Siege tanks now longer take a paid vacation when unsiegeing
+* Bot now builds reactionary Golaiths in responce to enemy Air
+* Basic nuke avoidiance script (Fuck you Stock Terran AI stop fucking nuking my shit)
+* Now builds Bunkers and Missile Turrets to defend 2nd base
+* Gave enemy units "special" names
+* After a harsh whipping, the bot no longer upgrades spider mines when no vultures are on the field
+* Oh and vultures are disabled
+* Installed AVG free edition onto my Jar File so it can no longer get hacked from github
+* Custom Unit Targetting (E.G Targetting Repairing SCV"s, Medics, High Templars)
+* A load of shit i did drunk
+* A load of shit that i deleted when i was sober the next day
 
 <hr />
 
