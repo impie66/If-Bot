@@ -77,35 +77,60 @@ Colonizing the enemy
 STRATEGIC BASE DESIGN
 
 ![soup](https://i.imgur.com/bCd8VUn.gif)
+<br />
 Introducing BWEB1 -- If Bot's Zergling tight wall system.
 
 ![pineapples](https://i.imgur.com/vtKL4SK.gif)
+<br />
 Jaedong's imba bbs tank medic build
 
 ![carrots](https://i.imgur.com/VKQCH4R.gif)
+<br />
 Appriopate decision making 
+
+![pees](https://i.imgur.com/jLaH6yl.png)
+<br />
+Smart Walling System
+
+![onions](https://i.imgur.com/sQbEDx3.gif)
+<br />
+Worker Management
+
+![apples](https://i.imgur.com/hA3hQ84.gif)
+<br />
+Every crash long file
+
+![oranges](https://i.imgur.com/NZm6Jag.png)
+<br />
+The Maginot Line recreated in Starcraft
+
+![jedks](https://i.imgur.com/ntL9doU.png)
+<br />
+
+![scv](https://i.imgur.com/VybxDJ8.png)
+<br />
+Fully functional worker defence
+
+![winning](https://i.imgur.com/Wgh16Q0.png)
+<br />
+Winning Streak
+
+![winstreak](https://i.imgur.com/WCVdpVS.png)
+<br />
+Only cool kids code in comic sans
+
+![stuff](https://i.imgur.com/WCVdpVS.png)
+<br />
+
+![dfgndzg](https://media.giphy.com/media/1yie9L5ZwcybDF4k7L/giphy.gif)
+<br />
+.... Yes
+
+
+
+
 
 <hr />
 
-<h2>Videos</h2>
-<video controls="controls">
-  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/ai1.mp4"></source>
-  <p>Your Shitty computer does not support my videos.</p>
-</video>
-
-<video controls="controls">
-  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/bewb.mp4"></source>
-  <p>Your Shitty computer does not support my videos.</p>
-</video>
-
-<video controls="controls">
-  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/mycrashes.mp4"></source>
-  <p>Your Shitty computer does not support my videos.</p>
-</video>
-
-<video controls="controls">
-  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/scv.mp4"></source>
-  <p>Your Shitty computer does not support my videos.</p>
-</video>
 
 
