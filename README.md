@@ -119,9 +119,5 @@ Winning Streak
 <br />
 Only cool kids code in comic sans
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/iycdnvk"><a href="//imgur.com/iycdnvk"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-
-<hr />
-
 
 
