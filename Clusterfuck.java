@@ -1,8 +1,6 @@
 
 import java.lang.reflect.Constructor;		
 import java.math.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -10,16 +8,11 @@ import java.util.Map;
 import java.util.HashSet;
 import java.util.Random;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Collection;
 import java.applet.Applet;
 import java.applet.AudioClip;
-import java.awt.Color;
 import java.lang.*;
 import bwapi.*;
 import bwapi.Pair;
@@ -27,10 +20,7 @@ import bwta.BWTA;
 import bwta.BaseLocation;
 import bwta.Chokepoint;
 import jfap.*;
-import javafx.util.*;
-import  sun.audio.*;
-import  java.io.*;
-import java.io.File;
+
 
 
 public class TestBot1 extends DefaultBWListener {
