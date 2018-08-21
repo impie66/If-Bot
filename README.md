@@ -119,10 +119,7 @@ Winning Streak
 <br />
 Only cool kids code in comic sans
 
-![stuff](https://i.imgur.com/WCVdpVS.png)
-<br />
-
-![dfgndzg](https://media.giphy.com/media/1yie9L5ZwcybDF4k7L/giphy.gif)
+![dfgndzg](https://giphy.com/gifs/1yie9L5ZwcybDF4k7L/html5)
 <br />
 .... Yes
 
