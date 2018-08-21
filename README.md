@@ -119,9 +119,7 @@ Winning Streak
 <br />
 Only cool kids code in comic sans
 
-<iframe src="https://giphy.com/embed/1yie9L5ZwcybDF4k7L" width="480" height="367" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/1yie9L5ZwcybDF4k7L">via GIPHY</a></p>
-
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/iycdnvk"><a href="//imgur.com/iycdnvk"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 <hr />
 
