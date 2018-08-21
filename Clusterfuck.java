@@ -55,7 +55,7 @@ public class TestBot1 extends DefaultBWListener {
 	private boolean HasScoutUnit;
 	private int scoutID = 0;
 	private int Factories = 0;
-	private int MaxFactories = 2;
+	private int MaxFactories = 1;
 	private int StarPorts = 0;
 	private int TSF = 0;
 	private int Marines = 0;
@@ -1035,7 +1035,7 @@ public class TestBot1 extends DefaultBWListener {
 		}
 		
 		
-		if(unit.getPlayer() == game.enemy() && ismil == true && enemyRushUnits.contains(unit) == false && totalFrames < 7500){
+		if(unit.getPlayer() == game.enemy() && ismil == true && enemyRushUnits.contains(unit) == false && totalFrames < 9500){
 			enemyRushUnits.add(unit);
 			int score = getScoreOf(unit);
 			enemyRushScore = enemyRushScore + score;
@@ -1168,10 +1168,9 @@ public class TestBot1 extends DefaultBWListener {
 			UpdateStrats();
 		}
 		
-
 		if(scouter != null){
 			if(scouter.exists() && scouter.isCompleted() == true && scouter.isMoving() == true){
-				if(unit.getPlayer().isEnemy(self) && unit.getOrder() == Order.AttackUnit && unit.getOrderTarget() == scouter){							
+				if(unit.getPlayer().isEnemy(self) && unit.isInWeaponRange(scouter) == true){							
 					game.drawCircleMap(unit.getPosition(), 30, bwapi.Color.Yellow);
 					Position flee = GetKitePos2(scouter, unit);
 					if(flee != null){
@@ -1225,7 +1224,7 @@ public class TestBot1 extends DefaultBWListener {
 		MaxGol = 3 + (AirThreat * 2);
 		MaxWorkers = 2 + (myMinerals.size() * 1) + (MaxGases * 3);
 		VulturesMax = (Tanks * 2) + 6;
-		MarinesNeed = 5 + (Bunks * 4) + (Tanks * 5) + MarinesNeedBonus + (InvadersScore / 25) + (enemyRushScore / 50);
+		MarinesNeed = 10 + (Bunks * 4) + (Tanks * 5) + MarinesNeedBonus + (InvadersScore / 25) + (enemyRushScore / 50);
 		MedicsNeed = Math.round(MarinesNeed / 4); 
 		BatsNeed = 4;
 		Tick = Tick + 1;
@@ -1339,8 +1338,8 @@ public class TestBot1 extends DefaultBWListener {
 			if(totalFrames < 10000){
 				
 				MaxBunks = (enemyRushScore / 300) + 1;
-				if(MaxBunks > 3){
-					MaxBunks = 3;
+				if(MaxBunks > 2){
+					MaxBunks = 2;
 				}
 				
 			}
@@ -2757,22 +2756,21 @@ public class TestBot1 extends DefaultBWListener {
 						}
 						
 						for(Unit weeheads : meinNichtUnits){
-							if(weeheads.getType() == UnitType.Zerg_Lurker ||
-								weeheads.getType() == UnitType.Terran_Medic || 
-								weeheads.getType() == UnitType.Protoss_High_Templar || 
-								weeheads.getType() == UnitType.Protoss_Carrier ||
-								weeheads.getType() == UnitType.Zerg_Defiler ||
-								weeheads.getType() == UnitType.Terran_SCV){
+							if(ShouldBeFocused(weeheads) == true){
 								for(Unit unit : meinUnits){
+									boolean isMil1 = IsMilitrayUnit(unit);
 									if(weeheads != null){
-										if(unit.canAttack(weeheads) == true && unit.getType().isWorker() == false){
+										if(isMil1 == true || IsMilitrayBuilding(unit) == true){
 											unit.attack(weeheads);
 											game.drawCircleMap(weeheads.getPosition(), 15, bwapi.Color.Green);
+											game.pingMinimap(weeheads.getPosition());
+											break;
 										}
 									}
 								}
 							}
 						}
+						break;
 					}
 				}
 				
@@ -2924,7 +2922,7 @@ public class TestBot1 extends DefaultBWListener {
 							}
 							
 						}
-					}
+				}
 			}
 				
 
@@ -3944,7 +3942,7 @@ public boolean CanExpand(){
 	// Stop Ctrl-f'ing my code Hannes
 	// nuke nuke hannes bregberg nuke more nukes ghost stuff bio bot
 	if(TeamGameMode == false){
-		if(fapMyScores > InvadersScore + Math.round(estimatedEnemyScore / 3)){
+		if(fapMyScores > InvadersScore + Math.round(estimatedEnemyScore / 2)){
 			return true;
 		}
 		else{
@@ -4081,25 +4079,7 @@ public void PreAttackScan(){
 }
 
 public void PanicBuildMil(){
-	for (Unit buildings : productionBuildings) {
-		
-		// best way to get the bot to build after its build
-		// frozen is probably max the supply and let it spam.
-		
-		if (buildings.getType() == UnitType.Terran_Factory && self.minerals() >= 600
-				&& self.gas() >= 300 && buildings.isIdle() == true) {
-			buildings.train(UnitType.Terran_Siege_Tank_Tank_Mode);
-		}
-		if (buildings.getType() == UnitType.Terran_Barracks && self.minerals() >= 700
-				 && AcademyBuilt == true && buildings.isIdle() == true) {
-					buildings.train(UnitType.Terran_Marine);
-		}
 
-		if (buildings.getType() == UnitType.Terran_Starport && game.canMake(UnitType.Terran_Battlecruiser) == true && self.minerals() >= 700 && self.gas() >= 300 && buildings.isIdle() == true) {
-			buildings.train(UnitType.Terran_Battlecruiser);
-		}
-
-	}
 }
 
 
@@ -4518,7 +4498,7 @@ public UnitType NextTechGoal(){
 		return UnitType.Terran_Academy;
 	}
 	
-	if(Factories == 0 && buildTypes.contains(UnitType.Terran_Factory) == false && HowManyDoIHave(UnitType.Terran_Factory) == 0 && Racks >= MaxRacks){
+	if(Factories == 0 && buildTypes.contains(UnitType.Terran_Factory) == false && HowManyDoIHave(UnitType.Terran_Factory) == 0 && Racks >= MaxRacks && fapMyScores > 900){
 		return UnitType.Terran_Factory;
 	}
 	
@@ -4623,8 +4603,8 @@ public int GetHighestPlayerScore() {
 
 public boolean ShouldRegroup(Position pos) {
 	// TODO fix this shit
-int dist = 0;
-boolean hasUnitsNearby = false;
+	int dist = 0;
+	boolean hasUnitsNearby = false;
 
 	if(game.isVisible(pos.toTilePosition()) == false){
 		return false;
@@ -4633,9 +4613,8 @@ boolean hasUnitsNearby = false;
 	if(myUnits.isEmpty() == false){
 
 		for(Unit units : myUnits){
-				dist = dist + units.getPosition().getApproxDistance(pos);
-				System.out.println("Dist is now: " + dist);
-		
+			dist = dist + units.getPosition().getApproxDistance(pos);
+			System.out.println("Dist is now: " + dist);
 		}
 		
 		dist = Math.round(dist / myUnits.size());
@@ -4785,6 +4764,40 @@ public boolean BunkerCanAttack(Unit bunker, Unit Target){
 	return false;
 	
 }
+
+public boolean ShouldBeFocused(Unit weeheads){
+	
+	if(weeheads.getType() == UnitType.Terran_Vulture_Spider_Mine && weeheads.isBurrowed() || weeheads.isDetected() == true){
+		return true;
+	}
+	
+	if(weeheads.getType() == UnitType.Zerg_Lurker ){
+		return true;
+	}
+	
+	if(weeheads.getType() == UnitType.Terran_SCV && weeheads.isRepairing() == true){
+		return true;
+	}
+	
+	if(weeheads.getType() == UnitType.Terran_Medic && weeheads.getOrder() == Order.MedicHeal || weeheads.getOrder() == Order.HealMove){
+		return true;
+	}
+	
+	if(weeheads.getType() == UnitType.Protoss_High_Templar){
+		return true;
+	}
+	
+	if(weeheads.getType() == UnitType.Protoss_Carrier){
+		return true;
+	}
+	
+
+	return false;
+	
+}
+
+
+
 
 
 		
