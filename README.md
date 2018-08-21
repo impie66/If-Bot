@@ -88,6 +88,28 @@ Appriopate decision making
 <hr />
 
 <h2>Videos</h2>
+<video controls="controls">
+  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/ai1.mp4"></source>
+  <source type="video/webm" src="filename.webm"></source>
+  <p>Your Shitty computer does not support my videos.</p>
+</video>
 
+<video controls="controls">
+  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/bewb.mp4"></source>
+  <source type="video/webm" src="filename.webm"></source>
+  <p>Your Shitty computer does not support my videos.</p>
+</video>
+
+<video controls="controls">
+  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/mycrashes.mp4"></source>
+  <source type="video/webm" src="filename.webm"></source>
+  <p>Your Shitty computer does not support my videos.</p>
+</video>
+
+<video controls="controls">
+  <source type="video/mp4" src="https://github.com/impie66/If-Bot/blob/master/scv.mp4"></source>
+  <source type="video/webm" src="filename.webm"></source>
+  <p>Your Shitty computer does not support my videos.</p>
+</video>
 
 
