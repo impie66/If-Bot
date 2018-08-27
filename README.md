@@ -32,7 +32,8 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 <hr />
 
 <h2>What Issues did i face when developing the bot?</h2>
-<strong>Having to actually use my brain for once.</strong>
+I started programming my AI with no programming experience at all. it was tough, but it was worth it.
+
 
 <hr />
 
