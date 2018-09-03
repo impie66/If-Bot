@@ -22,12 +22,15 @@ Really bad Brood war AI Designed by me using rules and ALOT of if statements fue
 
 <h2>Running If Bot Locally</h2>
 
-32 bit JRE is required to run If Bot.
+32 bit JRE is required to run If Bot and starcraft 1.1.6
+The SSCAIT tourament website will explain how to get starcraft 1.16 you can view it [here](https://sscaitournament.com/index.php?action=tutorial)
 
 1. Download the Jar file from the SSCAIT website or directly [Here](https://sscaitournament.com/bot_binary.php?bot=If+Bot)
-2. Run either with ai = IfBot.jar in the BWAPI.ini file or with CMD command java -jar ifBot.JAR and twith no ai = field in the BWAPi.ini file.
-3. Launch Chaos launcher with BWAPI injected, nake sure the BWAPi.ini file is set up correctly
-4. Sit back and relax
+2. Paste ifBot.jar inside the bwapi-data folder inside starcraft game files
+3. Modify bwapi.ini so the race is TERRAN and ai field is empty example: ai  = 
+4. run a CMD command java -jar ifBot.jar file. 
+5. Launch Chaos launcher with BWAPI injected(Tick BWAPI 4.1.2 injector (Release)), make sure the BWAPi.ini file is set up correctly (read #2)
+
 
 <hr />
 
