@@ -79,34 +79,34 @@ Changelog latest = new Changelog(String date){
 
 *Added Basic FFA support(Bot will attack the weakest player in the match) (Currently Disabled)
 
-*Bot nows expands early if the enemy is turtling
-*Manually increased zealots score because they are fucking imba.
-*Bot will now automatically hates ANY protoss player
-*Adjusted the early marine count from Not Enought -> Marine hell levels
-*Fixed multiple units trying to load into a full bunker and not counting as the main militray force(They will just stand there idle FOREVER.)
-*Bot now regroups based on unit distance and not just every X frames	
-*Broke FAP again and couldnt be fucked fixing it
-*Added storm dodging(Basic)
-*Priority Building and Unit system Bot will now attempt to save for these items and build them ASAP. 
-*Added more bugs and crashes
-*Bot no longer does the BBS build.
-*Bot now will scan cloaked/burrowed units when army is nearby to attack it instead of whenever it is spotted.
-*Medics now no suicide a little less
-*Nerfed the amount of sleep daily from 8 -> 5
-*Bot will now react to 6 pool. (It'll just make marines for awhile)
-*Bot now poop reacts anything C++ related on discord
-*Bot no longer repairs buildings that are under attack unless they are a bunker or a Missile turret
-*Bot now stores which baseLocations it has scouted when the enemy is not found
-*Bot now repairs bunkers and missile turrets with 3 scvs instead of 1 (Krais0 Style)
-*Bot now assigns workers to bases. Workers will have a lines pointing to what base they are assigned to
-*Bot will now only build workers during safe conditions
-*Bot will now sell Spare APM to the highest korean bidder. Profits go to Scott's Tots
-*Bot will now bet against itself in spritecraft
-*Bot now doesn't try to co-base with the same base as the enemy!
-*Bot now pulls workers to defend itself
-*Bot will now also regroup before attacking automatically based on average distance
-*Marines now don't stim below 30 health
-*Changed the likelyness of the scout dieing from 100% -> 120%
+* Bot nows expands early if the enemy is turtling
+* Manually increased zealots score because they are fucking imba.
+* Bot will now automatically hates ANY protoss player
+* Adjusted the early marine count from Not Enought -> Marine hell levels
+* Fixed multiple units trying to load into a full bunker and not counting as the main militray force(They will just stand there idle FOREVER.)
+* Bot now regroups based on unit distance and not just every X frames	
+* Broke FAP again and couldnt be fucked fixing it
+* Added storm dodging(Basic)
+* Priority Building and Unit system Bot will now attempt to save for these items and build them ASAP. 
+* Added more bugs and crashes
+* Bot no longer does the BBS build.
+* Bot now will scan cloaked/burrowed units when army is nearby to attack it instead of whenever it is spotted.
+* Medics now no suicide a little less
+* Nerfed the amount of sleep daily from 8 -> 5
+* Bot will now react to 6 pool. (It'll just make marines for awhile)
+* Bot now poop reacts anything C++ related on discord
+* Bot no longer repairs buildings that are under attack unless they are a bunker or a Missile turret
+* Bot now stores which baseLocations it has scouted when the enemy is not found
+* Bot now repairs bunkers and missile turrets with 3 scvs instead of 1 (Krais0 Style)
+* Bot now assigns workers to bases. Workers will have a lines pointing to what base they are assigned to
+* Bot will now only build workers during safe conditions
+* Bot will now sell Spare APM to the highest korean bidder. Profits go to Scott's Tots
+* Bot will now bet against itself in spritecraft
+* Bot now doesn't try to co-base with the same base as the enemy!
+* Bot now pulls workers to defend itself
+* Bot will now also regroup before attacking automatically based on average distance
+* Marines now don't stim below 30 health
+* Changed the likelyness of the scout dieing from 100% -> 120%
 
 }
 
