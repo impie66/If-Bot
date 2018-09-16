@@ -140,7 +140,7 @@ Jaedong's imba bbs tank medic build
 
 ![carrots](https://i.imgur.com/VKQCH4R.gif)
 <br />
-Appriopate decision making 
+Appropriate decision making 
 
 ![pees](https://i.imgur.com/jLaH6yl.png)
 <br />
