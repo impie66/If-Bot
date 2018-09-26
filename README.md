@@ -91,7 +91,7 @@ Changelog latest = new Changelog(String date){
 * Added more bugs and crashes
 * Bot no longer does the BBS build.
 * Bot now will scan cloaked/burrowed units when army is nearby to attack it instead of whenever it is spotted.
-* Medics now no suicide a little less
+* Medics now suicide a little less
 * Nerfed the amount of sleep daily from 8 -> 5
 * Bot will now react to 6 pool. (It'll just make marines for awhile)
 * Bot now poop reacts anything C++ related on discord
