@@ -1,7 +1,7 @@
 
 <h1>If Bot</h1>
 
-Really bad Brood war AI Designed by me using rules and ALOT of if statements fueled by alot of vodka ,Pasta and discord Shit Posting.
+Really bad Brood war AI Designed by me using rules and ALOT of if statements fueled by alot of vodka, Pasta and discord Shit Posting.
 
 <h2><b>Features</b></h2>
 
