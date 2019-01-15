@@ -175,17 +175,23 @@ Only cool kids code in comic sans
 High level code
 
 ![Approval](https://i.imgur.com/oWZWiN3.png)
+<br />
  Seal of approval
 
 ![onFrame](https://i.imgur.com/jERolkL.png)
+<br />
 Bot > intellij
 
 <h3>Edit: 15/01/2019</h3>
 
 The latest code on the github was for a debugging session with Yegers.
+<br />
+It pains me to say but i am no longer developing my bot. Currently i am deciding if i want develop the bot as a "Joke Bot" or reconstruct the bot and push it higher the ladder. 
 
-It pains me to say, i no longer have interest in further developing my bot. This may change in the future. 
-I may get ideas every now and again and feel interested but this only lasts a short while.
-I have none other than myself to blame, i embraced my bot as a "Broken meme bot" and coded it stupidly which lost any protential it had for being a top 10 bot. 
+
+
+
+
+
 
 
