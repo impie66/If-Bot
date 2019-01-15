@@ -172,6 +172,7 @@ Winning Streak
 Only cool kids code in comic sans
 
 ![IfBotBugs](https://i.imgur.com/9qbIkil.png)
+<br />
 High level code
 
 ![Approval](https://i.imgur.com/oWZWiN3.png)
@@ -186,7 +187,7 @@ Bot > intellij
 
 The latest code on the github was for a debugging session with Yegers.
 <br />
-It pains me to say but i am no longer developing my bot. Currently i am deciding if i want develop the bot as a "Joke Bot" or reconstruct the bot and push it higher the ladder. 
+It pains me to say but i am no longer developing my bot. Currently i am deciding if i want develop the bot as a "Joke Bot" or reconstruct the bot and push it higher on the ladder. 
 
 
 
