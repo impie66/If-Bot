@@ -3,6 +3,8 @@
 
 Really bad Brood war AI Designed by me using rules and ALOT of if statements fueled by alot of vodka, Pasta and discord Shit Posting.
 
+Learn more about it [here:](https://en.wikipedia.org/wiki/Spaghetti_code#Ravioli_code) 
+
 <h2><b>Features</b></h2>
 
 
